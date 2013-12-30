@@ -140,7 +140,7 @@
         <Param name="advancedParams"/>
         <Param name="name" val="targetLeft" valType="code" updates="constant"/>
         <Param name="lineColor" val="$[1,1,1]" valType="str" updates="constant"/>
-        <Param name="lineWidth" val="1" valType="code" updates="constant"/>
+        <Param name="lineWidth" val="0" valType="code" updates="constant"/>
       </PolygonComponent>
       <PolygonComponent name="targetRight">
         <Param name="lineColorSpace" val="rgb" valType="str" updates="constant"/>
@@ -162,7 +162,7 @@
         <Param name="advancedParams"/>
         <Param name="name" val="targetRight" valType="code" updates="constant"/>
         <Param name="lineColor" val="$[1,1,1]" valType="str" updates="constant"/>
-        <Param name="lineWidth" val="1" valType="code" updates="constant"/>
+        <Param name="lineWidth" val="0" valType="code" updates="constant"/>
       </PolygonComponent>
     </Routine>
     <Routine name="instructions">
