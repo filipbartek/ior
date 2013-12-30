@@ -22,6 +22,14 @@
   </Settings>
   <Routines>
     <Routine name="trial">
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="code" valType="code" updates="None"/>
+        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
+        <Param name="Begin Routine" val="targetStart = target_time / 1000&#10;targetPos = [0, 0]&#10;targetOpa = 0&#10;if (target_side == &quot;none&quot;):&#10;    targetOpa = 0&#10;if (target_side == &quot;central&quot;):&#10;    targetPos = [0, 0]&#10;    targetOpa = 1&#10;if (target_side == &quot;left&quot;):&#10;    targetPos = [-8, 0]&#10;    targetOpa = 1&#10;if (target_side == &quot;right&quot;):&#10;    targetPos = [8, 0]&#10;    targetOpa = 1" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
       <StaticComponent name="ISI">
         <Param name="code" val="" valType="code" updates="None"/>
         <Param name="name" val="ISI" valType="code" updates="None"/>
@@ -98,69 +106,25 @@
         <Param name="advancedParams"/>
         <Param name="fillColor" val="$[-1,-1,-1]" valType="str" updates="constant"/>
       </PolygonComponent>
-      <PolygonComponent name="targetMiddle">
-        <Param name="opacity" val="1" valType="code" updates="constant"/>
+      <PolygonComponent name="target">
         <Param name="lineColorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="targetMiddle" valType="code" updates="constant"/>
-        <Param name="size" val="[0.1, 0.1]" valType="code" updates="constant"/>
-        <Param name="nVertices" val="4" valType="code" updates="constant"/>
-        <Param name="durationEstim" val="" valType="code" updates="None"/>
-        <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
-        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="pos" val="targetPos" valType="code" updates="set every repeat"/>
         <Param name="fillColorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="units" val="deg" valType="str" updates="None"/>
-        <Param name="startType" val="time (s)" valType="str" updates="None"/>
-        <Param name="lineColor" val="$[1,1,1]" valType="str" updates="constant"/>
-        <Param name="ori" val="0" valType="code" updates="constant"/>
-        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
-        <Param name="startVal" val="0.050" valType="code" updates="None"/>
-        <Param name="lineWidth" val="0" valType="code" updates="constant"/>
-        <Param name="startEstim" val="" valType="code" updates="None"/>
-        <Param name="stopVal" val="0.5" valType="code" updates="constant"/>
-        <Param name="advancedParams"/>
-        <Param name="fillColor" val="$[1,1,1]" valType="str" updates="constant"/>
-      </PolygonComponent>
-      <PolygonComponent name="targetLeft">
-        <Param name="lineColorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="pos" val="[-8, 0]" valType="code" updates="constant"/>
-        <Param name="fillColorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="startVal" val="0.050" valType="code" updates="None"/>
+        <Param name="startVal" val="$targetStart" valType="code" updates="None"/>
         <Param name="size" val="[0.1, 0.1]" valType="code" updates="constant"/>
         <Param name="fillColor" val="$[1,1,1]" valType="str" updates="constant"/>
         <Param name="units" val="deg" valType="str" updates="None"/>
         <Param name="nVertices" val="4" valType="code" updates="constant"/>
-        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="opacity" val="targetOpa" valType="code" updates="set every repeat"/>
         <Param name="stopVal" val="0.5" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="interpolate" val="linear" valType="str" updates="constant"/>
-        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="startEstim" val="0.050" valType="code" updates="None"/>
         <Param name="startType" val="time (s)" valType="str" updates="None"/>
         <Param name="ori" val="0" valType="code" updates="constant"/>
         <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
         <Param name="advancedParams"/>
-        <Param name="name" val="targetLeft" valType="code" updates="constant"/>
-        <Param name="lineColor" val="$[1,1,1]" valType="str" updates="constant"/>
-        <Param name="lineWidth" val="0" valType="code" updates="constant"/>
-      </PolygonComponent>
-      <PolygonComponent name="targetRight">
-        <Param name="lineColorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="pos" val="[8, 0]" valType="code" updates="constant"/>
-        <Param name="fillColorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="startVal" val="0.050" valType="code" updates="None"/>
-        <Param name="size" val="[0.1, 0.1]" valType="code" updates="constant"/>
-        <Param name="fillColor" val="$[1,1,1]" valType="str" updates="constant"/>
-        <Param name="units" val="deg" valType="str" updates="None"/>
-        <Param name="nVertices" val="4" valType="code" updates="constant"/>
-        <Param name="opacity" val="1" valType="code" updates="constant"/>
-        <Param name="stopVal" val="0.5" valType="code" updates="constant"/>
-        <Param name="durationEstim" val="" valType="code" updates="None"/>
-        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
-        <Param name="startEstim" val="" valType="code" updates="None"/>
-        <Param name="startType" val="time (s)" valType="str" updates="None"/>
-        <Param name="ori" val="0" valType="code" updates="constant"/>
-        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
-        <Param name="advancedParams"/>
-        <Param name="name" val="targetRight" valType="code" updates="constant"/>
+        <Param name="name" val="target" valType="code" updates="constant"/>
         <Param name="lineColor" val="$[1,1,1]" valType="str" updates="constant"/>
         <Param name="lineWidth" val="0" valType="code" updates="constant"/>
       </PolygonComponent>
