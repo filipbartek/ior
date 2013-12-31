@@ -30,6 +30,26 @@
         <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
         <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
       </CodeComponent>
+      <TextComponent name="debugText">
+        <Param name="opacity" val="debugOpa" valType="code" updates="set every repeat"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="debugText" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="$debugStr" valType="str" updates="set every repeat"/>
+        <Param name="stopVal" val="2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[-1, -1]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
       <StaticComponent name="ISI">
         <Param name="code" val="" valType="code" updates="None"/>
         <Param name="name" val="ISI" valType="code" updates="None"/>
@@ -150,26 +170,21 @@
         <Param name="lineColor" val="$[1,1,1]" valType="str" updates="constant"/>
         <Param name="lineWidth" val="0" valType="code" updates="constant"/>
       </PolygonComponent>
-      <TextComponent name="debugText">
-        <Param name="opacity" val="debugOpa" valType="code" updates="set every repeat"/>
-        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="debugText" valType="code" updates="None"/>
-        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
-        <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="$debugStr" valType="str" updates="set every repeat"/>
+      <KeyboardComponent name="trialKey">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="trialKey" valType="code" updates="None"/>
         <Param name="stopVal" val="2" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
-        <Param name="pos" val="[-1, -1]" valType="code" updates="constant"/>
-        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="forceEndRoutine" val="False" valType="bool" updates="constant"/>
         <Param name="startEstim" val="" valType="code" updates="None"/>
-        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
         <Param name="startType" val="time (s)" valType="str" updates="None"/>
-        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="allowedKeys" val="'space'" valType="code" updates="constant"/>
         <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
-        <Param name="startVal" val="0.0" valType="code" updates="None"/>
-        <Param name="font" val="Arial" valType="str" updates="constant"/>
-        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
-      </TextComponent>
+        <Param name="startVal" val="0" valType="code" updates="None"/>
+        <Param name="store" val="first key" valType="str" updates="constant"/>
+      </KeyboardComponent>
     </Routine>
     <Routine name="instructions">
       <TextComponent name="instructionsText">
