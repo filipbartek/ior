@@ -21,43 +21,6 @@
     <Param name="Screen" val="1" valType="num" updates="None"/>
   </Settings>
   <Routines>
-    <Routine name="block1Start">
-      <TextComponent name="block1StartText">
-        <Param name="opacity" val="1" valType="code" updates="constant"/>
-        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="block1StartText" valType="code" updates="None"/>
-        <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="wrapWidth" val="1.5" valType="code" updates="constant"/>
-        <Param name="stopVal" val="" valType="code" updates="constant"/>
-        <Param name="durationEstim" val="" valType="code" updates="None"/>
-        <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
-        <Param name="flip" val="" valType="str" updates="constant"/>
-        <Param name="startEstim" val="" valType="code" updates="None"/>
-        <Param name="units" val="norm" valType="str" updates="None"/>
-        <Param name="text" val="Právě jste dokončili první ostrý blok úloh.&#13;&#10;&#13;&#10;Až budete připraveni začít řešit druhý ostrý blok úloh, stiskněte mezerník." valType="str" updates="constant"/>
-        <Param name="startType" val="time (s)" valType="str" updates="None"/>
-        <Param name="ori" val="0" valType="code" updates="constant"/>
-        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
-        <Param name="startVal" val="0.0" valType="code" updates="None"/>
-        <Param name="font" val="Arial" valType="str" updates="constant"/>
-        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
-      </TextComponent>
-      <KeyboardComponent name="block1StartKey">
-        <Param name="correctAns" val="" valType="str" updates="constant"/>
-        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
-        <Param name="name" val="block1StartKey" valType="code" updates="None"/>
-        <Param name="stopVal" val="" valType="code" updates="constant"/>
-        <Param name="durationEstim" val="" valType="code" updates="None"/>
-        <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
-        <Param name="startEstim" val="" valType="code" updates="None"/>
-        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
-        <Param name="startType" val="time (s)" valType="str" updates="None"/>
-        <Param name="allowedKeys" val="'space'" valType="code" updates="constant"/>
-        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
-        <Param name="startVal" val="0.0" valType="code" updates="None"/>
-        <Param name="store" val="nothing" valType="str" updates="constant"/>
-      </KeyboardComponent>
-    </Routine>
     <Routine name="trial">
       <CodeComponent name="init">
         <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
@@ -223,6 +186,43 @@
         <Param name="store" val="first key" valType="str" updates="constant"/>
       </KeyboardComponent>
     </Routine>
+    <Routine name="instructions">
+      <TextComponent name="instructionsText">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="instructionsText" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="1.5" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="V následujícím experimentu se testuje váš postřeh. Experiment se skládá z krátkých úloh, které se budou v obměnách opakovat. V každé úloze uvidíte 3 čtverce, po celou dobu sledujte prostřední čtverec, nesnažte se hýbat očima. Čekejte, zda se objeví v některém čtverci malý bílý čtvereček a pokud ano, stiskněte co nejrychleji mezerník. Pokud ne, nedělejte nic a počkejte na další úlohu. Snažte se pracovat co nejrychleji, ale přesně (bez chyb).&#13;&#10;&#13;&#10;Až budete připraveni začít řešit cvičnou sadu úloh, stiskněte mezerník." valType="str" updates="constant"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <KeyboardComponent name="instructionsKey">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="instructionsKey" valType="code" updates="None"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="allowedKeys" val="'space'" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="store" val="nothing" valType="str" updates="constant"/>
+      </KeyboardComponent>
+    </Routine>
     <Routine name="blockStart">
       <TextComponent name="blockStartText">
         <Param name="opacity" val="1" valType="code" updates="constant"/>
@@ -267,7 +267,7 @@
         <Param name="name" val="experimentEndText" valType="code" updates="None"/>
         <Param name="wrapWidth" val="1.5" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="Právě jste dokončili druhý ostrý blok úloh.&#13;&#10;&#13;&#10;Experiment je dokončen. Děkujeme za vaši spolupráci." valType="str" updates="constant"/>
+        <Param name="text" val="Právě jste dokončili druhý ostrý blok úloh.&#13;&#10;&#13;&#10;Experiment je tímto hotov. Děkujeme za vaši spolupráci!" valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
@@ -297,14 +297,14 @@
         <Param name="store" val="nothing" valType="str" updates="constant"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="instructions">
-      <TextComponent name="instructionsText">
+    <Routine name="block1Start">
+      <TextComponent name="block1StartText">
         <Param name="opacity" val="1" valType="code" updates="constant"/>
         <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="instructionsText" valType="code" updates="None"/>
+        <Param name="name" val="block1StartText" valType="code" updates="None"/>
         <Param name="wrapWidth" val="1.5" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="V následujícím experimentu se testuje váš postřeh. Experiment se skládá z krátkých úloh, které se budou v obměnách opakovat. V každé úloze uvidíte 3 čtverce, po celou dobu sledujte prostřední čtverec, nesnažte se hýbat očima. Čekejte, zda se objeví v některém čtverci malý bílý čtvereček a pokud ano, stiskněte co nejrychleji mezerník. Pokud ne, nedělejte nic a počkejte na další úlohu. Snažte se pracovat co nejrychleji, ale přesně (bez chyb).&#13;&#10;&#13;&#10;Až budete připraveni začít řešit cvičnou sadu úloh, stiskněte mezerník." valType="str" updates="constant"/>
+        <Param name="text" val="Právě jste dokončili první ostrý blok úloh.&#13;&#10;&#13;&#10;Až budete připraveni začít řešit druhý ostrý blok úloh, stiskněte mezerník." valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
@@ -318,10 +318,10 @@
         <Param name="font" val="Arial" valType="str" updates="constant"/>
         <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
       </TextComponent>
-      <KeyboardComponent name="instructionsKey">
+      <KeyboardComponent name="block1StartKey">
         <Param name="correctAns" val="" valType="str" updates="constant"/>
         <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
-        <Param name="name" val="instructionsKey" valType="code" updates="None"/>
+        <Param name="name" val="block1StartKey" valType="code" updates="None"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
