@@ -193,7 +193,7 @@
         <Param name="name" val="instrBlocksText" valType="code" updates="None"/>
         <Param name="wrapWidth" val="1.5" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="Experiment sestává ze tří bloků - jednoho cvičného a dvou ostrých. Ve cvičném bloku vám bude představena jedna sada úloh a v každém ze dvou ostrých bloků deset sad úloh." valType="str" updates="constant"/>
+        <Param name="text" val="Experiment sestává ze tří bloků – jednoho cvičného a dvou ostrých. Ve cvičném bloku vám bude představena jedna sada úloh a v každém ze dvou ostrých bloků deset sad úloh." valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
