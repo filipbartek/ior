@@ -230,7 +230,7 @@
         <Param name="name" val="instructionsText" valType="code" updates="None"/>
         <Param name="wrapWidth" val="1.5" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="V následujícím experimentu se testuje váš postřeh. Experiment se skládá z krátkých úloh, které se budou v obměnách opakovat. V každé úloze uvidíte 3 čtverce, po celou dobu sledujte prostřední čtverec, nesnažte se hýbat očima. Čekejte, zda se objeví v některém čtverci malý bílý čtvereček, a pokud ano, stiskněte co nejrychleji mezerník. Pokud ne, nedělejte nic a počkejte na další úlohu. Snažte se pracovat co nejrychleji, ale přesně (bez chyb).&#13;&#10;&#13;&#10;Až budete připraveni pokračovat na další obrazovku, stiskněte libovolnou klávesu." valType="str" updates="constant"/>
+        <Param name="text" val="V následujícím experimentu se testuje váš postřeh. Experiment se skládá z krátkých úloh, které se budou v obměnách opakovat. V každé úloze uvidíte 3 čtverce, po celou dobu sledujte prostřední čtverec, nesnažte se hýbat očima. Čekejte, zda se objeví v některém čtverci malý bílý čtvereček a pokud ano, stiskněte co nejrychleji mezerník. Pokud ne, nedělejte nic a počkejte na další úlohu. Snažte se pracovat co nejrychleji, ale přesně (bez chyb).&#13;&#10;&#13;&#10;Až budete připraveni pokračovat na další obrazovku, stiskněte libovolnou klávesu." valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
