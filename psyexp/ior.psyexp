@@ -1,7 +1,7 @@
 <PsychoPy2experiment version="1.79.01" encoding="utf-8">
   <Settings>
     <Param name="Show mouse" val="False" valType="bool" updates="None"/>
-    <Param name="Save csv file" val="False" valType="bool" updates="None"/>
+    <Param name="Save csv file" val="True" valType="bool" updates="None"/>
     <Param name="Monitor" val="testMonitor" valType="str" updates="None"/>
     <Param name="Enable Escape" val="True" valType="bool" updates="None"/>
     <Param name="color" val="$[-1,-1,-1]" valType="str" updates="None"/>
@@ -10,7 +10,7 @@
     <Param name="colorSpace" val="rgb" valType="str" updates="None"/>
     <Param name="Save log file" val="True" valType="bool" updates="None"/>
     <Param name="Experiment info" val="{u'session': u'001', u'participant': u''}" valType="code" updates="None"/>
-    <Param name="Save excel file" val="False" valType="bool" updates="None"/>
+    <Param name="Save excel file" val="True" valType="bool" updates="None"/>
     <Param name="Save wide csv file" val="True" valType="bool" updates="None"/>
     <Param name="Save psydat file" val="True" valType="bool" updates="None"/>
     <Param name="expName" val="ior" valType="str" updates="None"/>
@@ -267,7 +267,7 @@
         <Param name="name" val="experimentEndText" valType="code" updates="None"/>
         <Param name="wrapWidth" val="1.5" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="Právě jste dokončili experiment.&#13;&#10;&#13;&#10;Děkujeme za vaši spolupráci." valType="str" updates="constant"/>
+        <Param name="text" val="Právě jste dokončili druhý ostrý blok úloh.&#13;&#10;&#13;&#10;Experiment je dokončen. Děkujeme za vaši spolupráci." valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
@@ -338,19 +338,19 @@
   <Flow>
     <Routine name="instructions"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
-      <Param name="conditionsFile" val="ior-design-short.xlsx" valType="str" updates="None"/>
+      <Param name="conditionsFile" val="ior-design-1.xlsx" valType="str" updates="None"/>
       <Param name="name" val="trials" valType="code" updates="None"/>
       <Param name="random seed" val="0" valType="code" updates="None"/>
       <Param name="loopType" val="random" valType="str" updates="None"/>
       <Param name="nReps" val="1" valType="code" updates="None"/>
       <Param name="endPoints" val="[0, 1]" valType="num" updates="None"/>
-      <Param name="conditions" val="[{u'target_side': u'left', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 50, u'cue_side': u'left'}]" valType="str" updates="None"/>
+      <Param name="conditions" val="[{u'target_side': u'left', u'target_time': 50, u'cue_side': u'left'}]" valType="str" updates="None"/>
     </LoopInitiator>
     <Routine name="trial"/>
     <LoopTerminator name="trials"/>
     <Routine name="blockStart"/>
     <LoopInitiator loopType="TrialHandler" name="block0">
-      <Param name="conditionsFile" val="ior-design-short.xlsx" valType="str" updates="None"/>
+      <Param name="conditionsFile" val="ior-design-2.xlsx" valType="str" updates="None"/>
       <Param name="name" val="block0" valType="code" updates="None"/>
       <Param name="random seed" val="" valType="code" updates="None"/>
       <Param name="loopType" val="random" valType="str" updates="None"/>
@@ -362,11 +362,11 @@
     <LoopTerminator name="block0"/>
     <Routine name="block1Start"/>
     <LoopInitiator loopType="TrialHandler" name="block1">
-      <Param name="conditionsFile" val="ior-design-short.xlsx" valType="str" updates="None"/>
+      <Param name="conditionsFile" val="ior-design-1.xlsx" valType="str" updates="None"/>
       <Param name="name" val="block1" valType="code" updates="None"/>
       <Param name="random seed" val="" valType="code" updates="None"/>
       <Param name="loopType" val="random" valType="str" updates="None"/>
-      <Param name="nReps" val="10" valType="code" updates="None"/>
+      <Param name="nReps" val="1" valType="code" updates="None"/>
       <Param name="endPoints" val="[0, 1]" valType="num" updates="None"/>
       <Param name="conditions" val="[{u'target_side': u'left', u'target_time': 50, u'cue_side': u'left'}]" valType="str" updates="None"/>
     </LoopInitiator>
