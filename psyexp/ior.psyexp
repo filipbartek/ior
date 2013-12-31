@@ -264,25 +264,25 @@
   <Flow>
     <Routine name="instructions"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
-      <Param name="conditionsFile" val="ior-design.xlsx" valType="str" updates="None"/>
+      <Param name="conditionsFile" val="ior-design-short.xlsx" valType="str" updates="None"/>
       <Param name="name" val="trials" valType="code" updates="None"/>
       <Param name="random seed" val="0" valType="code" updates="None"/>
       <Param name="loopType" val="random" valType="str" updates="None"/>
       <Param name="nReps" val="1" valType="code" updates="None"/>
       <Param name="endPoints" val="[0, 1]" valType="num" updates="None"/>
-      <Param name="conditions" val="[{u'target_side': u'left', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'central', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'none', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'left', u'target_time': 50, u'cue_side': u'right'}, {u'target_side': u'right', u'target_time': 50, u'cue_side': u'right'}, {u'target_side': u'central', u'target_time': 50, u'cue_side': u'right'}, {u'target_side': u'none', u'target_time': 50, u'cue_side': u'right'}, {u'target_side': u'left', u'target_time': 200, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 200, u'cue_side': u'left'}, {u'target_side': u'central', u'target_time': 200, u'cue_side': u'left'}, {u'target_side': u'none', u'target_time': 200, u'cue_side': u'left'}, {u'target_side': u'left', u'target_time': 200, u'cue_side': u'right'}, {u'target_side': u'right', u'target_time': 200, u'cue_side': u'right'}, {u'target_side': u'central', u'target_time': 200, u'cue_side': u'right'}, {u'target_side': u'none', u'target_time': 200, u'cue_side': u'right'}, {u'target_side': u'left', u'target_time': 350, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 350, u'cue_side': u'left'}, {u'target_side': u'central', u'target_time': 350, u'cue_side': u'left'}, {u'target_side': u'none', u'target_time': 350, u'cue_side': u'left'}, {u'target_side': u'left', u'target_time': 350, u'cue_side': u'right'}, {u'target_side': u'right', u'target_time': 350, u'cue_side': u'right'}, {u'target_side': u'central', u'target_time': 350, u'cue_side': u'right'}, {u'target_side': u'none', u'target_time': 350, u'cue_side': u'right'}]" valType="str" updates="None"/>
+      <Param name="conditions" val="[{u'target_side': u'left', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 50, u'cue_side': u'left'}]" valType="str" updates="None"/>
     </LoopInitiator>
     <Routine name="trial"/>
     <LoopTerminator name="trials"/>
     <Routine name="blockStart"/>
     <LoopInitiator loopType="TrialHandler" name="block">
-      <Param name="conditionsFile" val="ior-design.xlsx" valType="str" updates="None"/>
+      <Param name="conditionsFile" val="ior-design-short.xlsx" valType="str" updates="None"/>
       <Param name="name" val="block" valType="code" updates="None"/>
       <Param name="random seed" val="" valType="code" updates="None"/>
       <Param name="loopType" val="random" valType="str" updates="None"/>
       <Param name="nReps" val="10" valType="code" updates="None"/>
       <Param name="endPoints" val="[0, 1]" valType="num" updates="None"/>
-      <Param name="conditions" val="[{u'target_side': u'left', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'central', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'none', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'left', u'target_time': 50, u'cue_side': u'right'}, {u'target_side': u'right', u'target_time': 50, u'cue_side': u'right'}, {u'target_side': u'central', u'target_time': 50, u'cue_side': u'right'}, {u'target_side': u'none', u'target_time': 50, u'cue_side': u'right'}, {u'target_side': u'left', u'target_time': 200, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 200, u'cue_side': u'left'}, {u'target_side': u'central', u'target_time': 200, u'cue_side': u'left'}, {u'target_side': u'none', u'target_time': 200, u'cue_side': u'left'}, {u'target_side': u'left', u'target_time': 200, u'cue_side': u'right'}, {u'target_side': u'right', u'target_time': 200, u'cue_side': u'right'}, {u'target_side': u'central', u'target_time': 200, u'cue_side': u'right'}, {u'target_side': u'none', u'target_time': 200, u'cue_side': u'right'}, {u'target_side': u'left', u'target_time': 350, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 350, u'cue_side': u'left'}, {u'target_side': u'central', u'target_time': 350, u'cue_side': u'left'}, {u'target_side': u'none', u'target_time': 350, u'cue_side': u'left'}, {u'target_side': u'left', u'target_time': 350, u'cue_side': u'right'}, {u'target_side': u'right', u'target_time': 350, u'cue_side': u'right'}, {u'target_side': u'central', u'target_time': 350, u'cue_side': u'right'}, {u'target_side': u'none', u'target_time': 350, u'cue_side': u'right'}]" valType="str" updates="None"/>
+      <Param name="conditions" val="[{u'target_side': u'left', u'target_time': 50, u'cue_side': u'left'}, {u'target_side': u'right', u'target_time': 50, u'cue_side': u'left'}]" valType="str" updates="None"/>
     </LoopInitiator>
     <Routine name="trial"/>
     <LoopTerminator name="block"/>
